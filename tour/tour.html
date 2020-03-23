@@ -12,7 +12,7 @@
     }
 
     body{
-        background-color: darkmagenta;
+        background-color: white;
         max-width: 640px;
         margin: 0 auto;
         width: 100%;
@@ -28,6 +28,53 @@
         background-color: #2bab79;
         height: 60px;
     }
+
+    .plcRouteList{
+        margin-left: 5px;
+    }
+
+    .pic{
+        border-radius: 50%;
+    }
+
+    .title{
+        position: absolute;
+        font-size: 18px;
+        font-weight: bolder;
+        color: white;
+        top: 0px;
+        left: 20px;
+        white-space: nowrap;
+        line-height: 40px;
+        margin-left: 30px;
+    }
+
+    .bottom{
+        position: absolute;
+        top: 425px;
+        left: 460px;
+    }
+
+    .face{
+        float: left;
+        border: 2px solid white;
+        border-radius: 50%;
+        width: 39px;
+        height: 39px;
+    }
+
+    .day{
+        position: absolute;
+        top:110px;
+        right:460px;
+        border-radius: 50%;
+        color: white;
+        background-color: #2bab79;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+    }
 </style>
 
 <body>
@@ -35,10 +82,21 @@
         <h1>国内旅游计划</h1>
     </header>
     
-    <section class="">
+    <section class="plcRouteList">
+        
         <a href="#">
-            <img src="images/fengjing.jpg" alt="" width="640px">
+            <img src="images/fengjing.jpg" alt="" width="635px">
         </a>
+
+        <div class="bottom">
+            <p class="face">
+                <img src="images/touxiang.jpg" alt="" width="38" height="38" class="pic">
+            </p>
+            <h2 class="title">我的旅游行程</h2>
+        </div>  
+        
+        <p class="day">14天</p>
+    
     </section>
     
     
