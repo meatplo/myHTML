@@ -13,7 +13,7 @@ class Youdao():
         self.sign = self.get_sign()
 
     def get_salt(self):
-        return self.ts + random.randint(0, 10)
+        return self.ts + str(random.randint(0, 10))
 
     def get_md5(self, value):
         import hashlib
@@ -62,6 +62,9 @@ class Youdao():
 
 if __name__ == '__main__':
     while(True):
-        i = input("please input :")
-        youdao = Youdao(i)
-        print("fanyi result :",youdao.fanyi())
+        try:
+            i = input("please input :")
+            youdao = Youdao(i)
+            print("fanyi result :",youdao.fanyi())
+        except:
+            pass
