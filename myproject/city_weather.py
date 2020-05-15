@@ -34,7 +34,7 @@ class HeFeng():
 if __name__ == '__main__':
     hefeng = HeFeng()
     codes = hefeng.get_city_code()
-    for i in range(1,10):
+    for i in range(10):
         # dict = hefeng.get_weather(codes.__next__())
         # print(dict["HeWeather6"][0])
         hefeng.today_weather(codes.__next__())
