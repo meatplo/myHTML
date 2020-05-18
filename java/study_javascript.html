@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习JavaScript</title>
+</head>
+<body>
+    <script>
+        function sayHello() {
+            document.writeln("Hello world Javascript!");
+            alert("hello world javascript!");
+        }
+        
+        sayHello();
+
+        var sayHelloObject=function(x){
+            document.writeln('<br>');
+            document.writeln("x=",x);
+        };
+
+        sayHelloObject(518);
+
+        var study_var=function(){
+            var str1="变量名";
+            var num=1.5;
+            age = 18;
+            var cars=new Array("A","B","C");
+            document.writeln("<br>"+str1);
+            document.writeln("<br>"+num+"<br>"+age);
+            document.writeln("<br>"+cars);
+        }
+
+        study_var();
+
+        var sum=function(start,end){
+            var s=0;
+            var i;
+            for(i=start;i<=end;i++){
+                s=s+i;
+            }
+            document.writeln('<br>'+s);
+        }(1,100);
+
+        var sum_while=function(start,end){
+            var s=0;
+            var i=start;
+            while(i<=end){
+                if(i%2==1){
+                s=s+i;
+                }
+                i++;
+            }
+            document.writeln("<br>"+s);
+        }(1,100);
+
+        var for_in=function(arr){
+            for(var each in arr){
+                document.writeln('<br>');
+                document.writeln("brr["+each+"]="+arr[each])
+            }
+        }(new Array("a","test",1,3,0,[1,2,3,4]))
+
+
+
+
+    </script>  
+</body>
+</html>
