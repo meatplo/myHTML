@@ -21,6 +21,18 @@ class HefengDb():
     def delete(self):
         self.sheet_weather.delete_many({})
 
+    def save_all(self, weathers):
+        for each in weathers:
+            self.save(each)
+
+    def count(self):
+        all = self.sheet_weather.find()
+        nums = 0
+        for each in all:
+            nums = nums + 1
+        print(nums)
+
+
 
 if __name__ == "__main__":
     hefengDb = HefengDb()

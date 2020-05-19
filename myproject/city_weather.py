@@ -9,11 +9,21 @@ class HeFeng():
         self.pre_request = "https://free-api.heweather.net/s6/weather/now?location="
         self.sub_request = "&key=c1a96da12cc847cdae396b386f269fa1"
 
-    def today_weather(self,city_code):
+    def today_weather(self, city_code):
         dict = self.get_weather(city_code)
         print(dict["HeWeather6"][0]['now'])
 
-    def get_weather(self,city_code):
+    def get_all_weather(self, count_of_citys):
+        codes = self.get_city_code()
+        weathers = []
+        i = 0
+        while i < count_of_citys:
+            each = self.get_weather(next(codes))
+            weathers.append(each)
+            i = i + 1
+        return weathers
+
+    def get_weather(self, city_code):
         url = self.pre_request+city_code + self.sub_request
         info = requests.get(url)
         info.encoding = self.encoding
