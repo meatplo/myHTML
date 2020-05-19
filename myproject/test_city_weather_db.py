@@ -19,13 +19,13 @@ class TestCase(unittest.TestCase):
 
     def test_save_all(self):
         hefeng = HeFeng()
-        # codes = hefeng.get_city_code()
-        # for each in codes:
-        #   print(next(codes))
-        each = hefeng.get_weather("CN101010200")
-        print(each)
+        weathers = hefeng.get_all_weather(7)
         hefengDb = HefengDb()
-        hefengDb.save(each)
+        hefengDb.save_all(weathers)
+        print("show_all")
+        hefengDb.show_all()
+        self.assertEqual(7, hefengDb.count())
+        hefengDb.delete()
 
 
 if __name__ == '__main__':
