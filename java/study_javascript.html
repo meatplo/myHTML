@@ -82,7 +82,7 @@
         }
         
 
-        
+        document.writeln('<br>');
         document.writeln('<br>'+static_person.name);
         document.writeln('<br>'+static_person.school);
         document.writeln('<br>'+static_person.height);
@@ -108,6 +108,14 @@
 
         p=new function_person("zhangsan");
         p.eat();
+
+        //map
+        var m=new Map([['zhangbeirui',01],['zhangsan',70],['lisi',60]]);
+        document.writeln('<br>');
+        document.writeln(m.get('zhangbeirui'));
+        m.delete('zhangbeirui');
+        document.writeln('<br>');
+        document.writeln(m.get('zhangbeirui'));
 
 
 

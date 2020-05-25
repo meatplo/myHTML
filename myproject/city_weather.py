@@ -19,6 +19,7 @@ class HeFeng():
         i = 0
         while i < count_of_citys:
             each = self.get_weather(next(codes))
+            print(each)
             weathers.append(each)
             i = i + 1
         return weathers
